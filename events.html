@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CampusQuest — Афиша</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">CampusQuest</a>
+            <nav class="nav">
+                <a href="index.html">Главная</a>
+                <a href="events.html" class="active">Афиша</a>
+                <a href="game.html">Квиз-охота</a>
+                <a href="about.html">О команде</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container main">
+        <h2>Афиша ближайших событий</h2>
+
+        <div class="events-controls" color="black">
+            <input id="event-search" placeholder="Поиск по названию или тегу..." aria-label="Поиск событий">
+            <select id="filter-type" aria-label="Фильтр по типу">
+                <option value="all">Все типы</option>
+                <option value="music">Музыка</option>
+                <option value="tech">Технологии</option>
+                <option value="sport">Спорт</option>
+            </select>
+            <button id="add-event" class="btn">Добавить событие</button>
+        </div>
+
+        <ul id="events-list" class="events-list">
+            <li class="event-item placeholder" style="color: black;">Загрузка событий…</li>
+        </ul>
+
+        <!-- Модал добавления / редактирования события -->
+        <dialog id="event-dialog" class="event-dialog">
+            <form id="event-form" method="dialog">
+                <h3 id="dialog-title">Добавить событие</h3>
+                <label>Название
+                    <input name="title" required placeholder="Введите название">
+                </label>
+                <label>Дата
+                    <input name="date" type="date" required>
+                </label>
+                <label>Тег
+                    <input name="tag" placeholder="music / tech / sport">
+                </label>
+                <label>Описание
+                    <textarea name="desc" rows="4" placeholder="Короткое описание"></textarea>
+                </label>
+                <menu class="dialog-actions">
+                    <button type="reset" id="cancel-btn">Отмена</button>
+                    <button type="submit" class="btn" id="save-btn" style="color: black;">Сохранить</button>
+                </menu>
+            </form>
+        </dialog>
+
+        <template id="event-template" color="black">
+            <li class="event-item">
+                <div class="event-main" style="color: black;">
+                    <h4 class="event-title"></h4>
+                    <time class="event-date"></time>
+                    <span class="event-tag"></span>
+                    <p class="event-desc"></p>
+                </div>
+                <div class="event-actions">
+                    <button class="btn small edit-btn">Редактировать</button>
+                    <button class="btn small danger delete-btn">Удалить</button>
+                </div>
+            </li>
+        </template>
+
+    </main>
+
+    <div class="container">
+        <small>© CampusQuest</small>
+    </div>
+    </footer>
+
+    <script src="js/app.js" defer></script>
+</body>
+
+</html>

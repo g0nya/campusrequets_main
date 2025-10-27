@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CampusQuest — Афиша</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="/index.html" class="logo">CampusQuest</a>
+      <nav class="nav">
+        <a href="/index.html">Главная</a>
+        <a href="/events.html">Афиша</a>
+        <a href="/game.html">Квиз-охота</a>
+        <a href="/about.html">О команде</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Афиша ближайших событий</h2>
+
+    <div class="events-controls">
+      <input id="event-search" placeholder="Поиск по названию или тегу...">
+      <select id="filter-type">
+        <option value="all">Все типы</option>
+        <option value="music">Музыка</option>
+        <option value="tech">Технологии</option>
+        <option value="sport">Спорт</option>
+      </select>
+      <button id="add-event" class="btn">Добавить событие</button>
+    </div>
+
+    <ul id="events-list" class="events-list">
+      <!-- Список событий динамически заполняется JS -->
+    </ul>
+
+    <!-- Модал добавления события -->
+    <dialog id="event-dialog">
+      <form id="event-form">
+        <h3>Добавить событие</h3>
+        <label>Название <input name="title" required></label>
+        <label>Дата <input name="date" type="date" required></label>
+        <label>Тег <input name="tag" placeholder="music / tech / sport"></label>
+        <label>Описание <textarea name="desc"></textarea></label>
+        <menu>
+          <button type="reset">Отмена</button>
+          <button type="submit" class="btn">Сохранить</button>
+        </menu>
+      </form>
+    </dialog>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© CampusQuest</small>
+    </div>
+  </footer>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+:root{
+  /* цвета можно менять под вашу палитру */
+  --g1: #0f2027;
+  --g2: #203a43;
+  --g3: #2c5364;
+  --overlay: rgba(255,255,255,0.03);
+}
+* {
+  box-sizing: border-box
+}
+
+body {
+  background-color: var(--g1); /* fallback */
+  background-image: linear-gradient(135deg, var(--g1) 0%, var(--g2) 50%, var(--g3) 100%);
+  color: #fff0f0;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px
+
+}
+
+.site-header {
+  background: rgb(35, 4, 61);
+  padding: 14px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .06);
+  position: sticky;
+  top: 0;
+  z-index: 10
+}
+
+.logo {
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 20px
+}
+
+.nav {
+  display: flex;
+  gap: 14px;
+  align-items: center
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--muted)
+}
+
+.hero {
+  padding: 36px 0
+}
+
+.hero h1 {
+  margin: 0 0 8px;
+  font-size: 32px
+}
+
+.btn {
+  background: var(--accent);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent)
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 24px
+}
+
+.features h3 {
+  color: black;
+  margin-top: 0
+}
+
+.features p {
+  color: black;
+  margin-top: 0
+}
+
+.features article {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(79, 70, 229, .06)
+}
+
+.site-footer {
+  padding: 18px 0;
+  text-align: center;
+  color: var(--muted)
+}
+
+.events-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+  margin-top: 18px
+}
+
+.events-list li {
+  background: white;
+  padding: 12px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+.events-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 8px
+}
+
+.events-controls input,
+.events-controls select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb
+}
+
+.card {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 8px 26px rgba(16, 24, 40, .08)
+}
+
+.answers {
+  margin-top: 12px;
+  display: grid;
+  gap: 8px
+}
+
+.answers button {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: transparent;
+  cursor: pointer
+}
+
+.game-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 12px
+}
+
+.team-card {
+  background: white;
+  padding: 16px;
+  border-radius: 10px
+}
+
+.team-card li {
+  padding-left: 20px;
+  margin: 0;
+  color: black;
+}
+
+@media(max-width:640px) {
+  .nav {
+    display: none
+  }
+
+  .hero h1 {
+    font-size: 24px
+  }
+}
+
+/* small helpers */
+.hidden {
+  display: none
+}
+
+/* dialog styling */
+dialog {
+  border: none;
+  border-radius: 10px;
+  padding: 18px
+}
+
+/* visual focus */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus {
+  outline: 3px solid rgba(79, 70, 229, .12)
+}
+
+/* animation */
+.events-list li {
+  transition: transform .12s ease, box-shadow .12s
+}
+
+.events-list li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(16, 24, 40, .06)
+}
+
+/* small badge */
+.badge {
+  background: #eef2ff;
+  color: var(--accent);
+  padding: 6px 8px;
+  border-radius: 999px;
+  font-weight: 600
+}
+
+/* layout for game */
+.game-main .card {
+  max-width: 720px;
+  margin-top: 18px
+}

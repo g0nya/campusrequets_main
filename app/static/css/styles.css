@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.site-header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 0;
+}
+
+.site-header .logo {
+    font-size: 24px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.nav {
+    float: right;
+}
+
+.nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.nav a:hover {
+    background: #e8491d;
+}
+
+.hero {
+    background: #35424a;
+    color: #ffffff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 36px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.features article {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin: 0 10px;
+}
+
+.features article h3 {
+    color: #35424a;
+}
+
+.cta {
+    margin: 20px 0;
+}
+
+.btn {
+    display: inline-block;
+    background: #e8491d;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn.ghost {
+    background: transparent;
+    border: 2px solid #e8491d;
+    color: #e8491d;
+}
+
+.btn:hover {
+    background: #35424a;
+}
+
+.site-footer {
+    background: #35424a;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
